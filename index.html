@@ -22,6 +22,18 @@
         p {
             color: #555;
         }
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { top: 0; }
+            50% { top: 200px; }
+        }
     </style>
 </head>
 <body>
@@ -42,5 +54,6 @@
         .start-btn:hover {
             background-color: #b71c1c;
         }
+    <div class="ball"></div>
 </body>
 </html>
