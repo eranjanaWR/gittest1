@@ -5,9 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Page</title>
     <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --text-color: #333;
+            --subtext-color: #555;
+            --button-bg: #e53935;
+            --button-hover: #b71c1c;
+            --end-btn-bg: #1976d2;
+            --end-btn-hover: #0d47a1;
+        }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,10 +26,19 @@
             height: 100vh;
         }
         h1 {
-            color: #333;
+            color: var(--text-color);
         }
         p {
-            color: #555;
+            color: var(--subtext-color);
+        }
+        .dark-theme {
+            --bg-color: #181a1b;
+            --text-color: #f4f4f4;
+            --subtext-color: #cccccc;
+            --button-bg: #b71c1c;
+            --button-hover: #e53935;
+            --end-btn-bg: #263859;
+            --end-btn-hover: #1a2233;
         }
         .ball {
             width: 50px;
@@ -41,7 +59,7 @@
     <p>This is a simple HTML file.</p>
     <button class="start-btn">Start</button>
         .start-btn {
-            background-color: #e53935;
+            background-color: var(--button-bg);
             color: #fff;
             border: none;
             padding: 12px 32px;
@@ -52,8 +70,39 @@
             transition: background 0.2s;
         }
         .start-btn:hover {
-            background-color: #b71c1c;
+            background-color: var(--button-hover);
         }
+<<<<<<< Updated upstream
+=======
+        .end-btn {
+            background-color: var(--end-btn-bg);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            font-size: 1.2em;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 24px;
+            margin-left: 12px;
+            transition: background 0.2s;
+        }
+        .end-btn:hover {
+            background-color: var(--end-btn-hover);
+        }
+    </style>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <button onclick="toggleTheme()" style="position: absolute; top: 20px; right: 20px; padding: 8px 18px; border-radius: 5px; border: none; background: #444; color: #fff; cursor: pointer;">Toggle Dark Theme</button>
+    <h1>Hello, World!</h1>
+    <p>This is a simple HTML file.</p>
+    <button class="start-btn">Start</button>
+    <button class="end-btn">End</button>
+>>>>>>> Stashed changes
     <div class="ball"></div>
 </body>
 </html>
